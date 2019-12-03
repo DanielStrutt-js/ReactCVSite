@@ -1,0 +1,27 @@
+.Container{
+    margin-top:5%;
+    margin-left: 5%;
+    width: 50%
+}
+
+
+.HomeText{
+    color:white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 4vh;
+    
+    
+}
+
+.HomeTextUnder{
+    color:white;
+    font-weight: bold;
+    font-size: 2vh
+}
+
+.TextBar{
+
+    height:1vh;
+    width: 85%;
+}
