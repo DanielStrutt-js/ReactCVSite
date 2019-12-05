@@ -5,5 +5,15 @@
 
 .Btn{
     margin-top: 70%;
-    margin-left: 10%;
+    
 }
+
+.Link{
+    height:30px;
+    width: 120px;
+    display: block;
+    color:  rgba(192,21,198,1);
+    font-weight: bold;
+    margin: 4vh;
+}
+

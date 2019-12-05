@@ -1,7 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
+import {Link} from 'react-router-dom';
+
 import Btn from '../MenuBtn/MenuBtn';
 import { elastic as Menu } from 'react-burger-menu'
-import FlexView from 'react-flexview';
+
 
 
 
@@ -10,7 +13,7 @@ class BurgerMenu extends React.Component {
     super(props)
     this.state = {
       menuOpen: false,
-    
+      
     }
 
   }
@@ -22,9 +25,7 @@ class BurgerMenu extends React.Component {
   }
   
   // This can be used to close the menu, e.g. when a user clicks a menu item
-  closeMenu () {
-    this.setState({menuOpen: false})
-  }
+  
 
   // This can be used to toggle the menu, e.g. when using a custom icon
   // Tip: You probably want to hide either/both default icons if using a custom icon
@@ -32,6 +33,8 @@ class BurgerMenu extends React.Component {
   toggleMenu () {
     this.setState(state => ({menuOpen: !state.menuOpen}))
   }
+
+  
 
   render () {
     return (
@@ -44,12 +47,13 @@ class BurgerMenu extends React.Component {
           onStateChange={(state) => this.handleStateChange(state)}
         >
           
-          <Btn title='HOME' onClick={() => this.closeMenu()} />
-          <Btn title='About ME' onClick={() => this.closeMenu()} />
-          <Btn title='What i can do' onClick={() => this.closeMenu()} />
-          <Btn title='What im up to' onClick={() => this.closeMenu()} />
+          <Btn title='HOME' link='/' />
+          <Btn title="About me" link='/about' />
+          <Btn title='What i can do' link='/iCanDo' />
+          <Btn title='What im up to' link='/upTo'  />
           <Btn title='Projects' onClick={() => this.closeMenu()} />
           <Btn title='Contact me' onClick={() => this.closeMenu()} />
+          
           
         </Menu>
         
@@ -59,7 +63,20 @@ class BurgerMenu extends React.Component {
   }
 }
 
-export default BurgerMenu
+
+
+  const mapDispatchToProps = dispatch => {
+    return {
+        onMainMenuClick: () => dispatch({type:'MAINMENU'}),
+        onAboutMenuClick: () => dispatch({type:'ABOUTMENU'}),
+        
+    };
+}
+
+export default connect(null, mapDispatchToProps)(BurgerMenu)
+
+
+
 
 var styles = {
   bmBurgerButton: {

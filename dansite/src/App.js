@@ -1,31 +1,52 @@
-import React from 'react';
+import React, {Component} from 'react';
+import { connect } from 'react-redux';
 import FlexView from 'react-flexview';
-
-
-import Footer from './components/HomeScreenBottom/HomeScreenBottom';
-import DLogo from './components/NameLogo/NameLogo';
-import HomeText from './components/HomeScreenText/HomeScreenText';
-import Btn from './components/MenuBtn/MenuBtn';
-import BurgerMenu from './components/BurgerMenu/BurgerMenu'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 
 
-function App (){
+import BurgerMenu from './components/BurgerMenu/BurgerMenu';
+import MainMenu from './pages/MainMenu';
+import AboutMenu from './pages/AboutMenu';
+import CanDoMenu from './pages/CanDoMenu';
+import UpToMenu from './pages/UpToMenu';
+
+class App extends Component{
+
   
+  
+  
+  render() {
+    
     return(
         
       <FlexView hAlignContent="center" vAlignContent="top" >
        
-       <BurgerMenu/>
-            <HomeText/>
-             <DLogo/>
-            <Footer/>
+       
+           
+          <Router>
+          <BurgerMenu/>
+            <Switch>
+            
+                    <Route path="/" exact component={MainMenu}/>
+                    <Route path="/about" component={AboutMenu}/>
+                    <Route path="/iCanDo" component={CanDoMenu}/>
+                    <Route path="/upTo" component={UpToMenu}/>
+
+            </Switch>
+          </Router> 
+         
             
             
       </FlexView>
 
       );
-    }
+    }}
 
+    const mapStateToProps = state => {
+      return {
+    
+         ctr: state.menu
+      }};
 
-export default App;
+   export default connect(mapStateToProps)(App);

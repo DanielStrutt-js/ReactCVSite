@@ -2,20 +2,33 @@ import React from "react";
 import { AwesomeButton } from "react-awesome-button";
 import FlexView from 'react-flexview';
 import classes from "../MenuBtn/MenuBtn.module.css"
-import styles from 'react-awesome-button/src/styles/themes/theme-rickiest';
+import "../MenuBtn/styles.css";
+import {Link} from 'react-router-dom';
 
 
 
 function Button(props) {
+  
+ const linkTo =  <Link className={classes.Link} to={props.link}>{props.title}</Link>
+    
+  
+
+  
+
+  
   return (
 
 <FlexView className={classes.Btn}>
     <AwesomeButton
       
-      css={styles}
+      className={classes.awsbtn}
       type="primary"
+      
     >
-      <text className={classes.BtnText} >{props.title} </text>
+      
+      
+      {linkTo}
+      
     </AwesomeButton>
 </FlexView>
   );
