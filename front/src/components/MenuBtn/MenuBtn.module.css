@@ -1,0 +1,19 @@
+.BtnText{
+    font-weight: bold;
+    color:  rgba(192,21,198,1);
+}
+
+.Btn{
+    margin-top: 70%;
+    
+}
+
+.Link{
+    height:30px;
+    width: 180px;
+    display: block;
+    color:  rgba(192,21,198,1);
+    font-weight: bold;
+    margin: 1px;
+}
+

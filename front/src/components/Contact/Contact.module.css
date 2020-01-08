@@ -1,0 +1,29 @@
+.Title{ 
+    color: white;
+    font-weight: bold;
+    font-size: 5vh;
+    margin-top: 10%;
+  }
+  
+  .Text{
+    color: white;
+    font-size: 3.5vh;
+    margin-top: 5%;
+    
+  }
+  
+  .Text2{
+      color: white;
+      font-size: 3.5vh;
+      
+    }
+  
+  .Text3{
+      color: white;
+      font-size: 3.5vh;
+      
+    }
+  
+  .Flex{
+      width: 100%;
+  }

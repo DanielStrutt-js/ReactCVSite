@@ -1,0 +1,88 @@
+.Container{
+    margin-top:5%;
+    margin-left: 5%;
+    width: 50%
+}
+
+
+.HomeText{
+    color:white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 4vh;
+    
+    
+}
+
+.HomeTextUnder{
+    color:white;
+    font-weight: bold;
+    font-size: 2vh
+}
+
+.TextBar{
+
+    height:1vh;
+    width: 85%;
+}
+
+.List {
+        visibility: hidden;
+        color:white;
+        font-weight: bold;
+        font-size: 2vh
+}
+
+.ListContainer {
+    visibility: hidden;
+}
+
+@media (max-width: 500px) {
+    .Container{
+        margin-top:5%;
+        margin-left: 5%;
+        width: 50%;
+        visibility: hidden;
+    }
+    
+    
+    .HomeText{
+        color:white;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 4vh;
+        visibility: hidden;
+        
+        
+    }
+    
+    .HomeTextUnder{
+        color:white;
+        font-weight: bold;
+        font-size: 2vh;
+        visibility: hidden;
+    }
+    
+    .TextBar{
+    
+        height:1vh;
+        width: 85%;
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 501px) {
+    
+    .ListContainer {
+        visibility: visible;
+        
+    }
+    
+    .List {
+        
+        color:white;
+        font-weight: bold;
+        font-size: 20px;
+        visibility: visible;
+    }
+}

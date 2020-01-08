@@ -1,0 +1,77 @@
+body {
+    font-family: arial;
+    font-size: 20px;
+    color: #666;
+  }
+  form {
+    width: 500px;
+    background: transparent;
+    padding: 20px 25px;
+    margin: auto;
+    margin-top: 30px;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+    border-radius: 5%;
+  }
+  form input,
+  form textarea {
+    font: inherit;
+    padding: 5px 5px;
+    width: 100%;
+    margin-top: 3px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  form button {
+    
+    padding: 8px 35px;
+    font-size: 12px;
+    background: #888;
+    color: white;
+    border-radius: 5%;
+  }
+  form label {
+    color: white;
+    font-size: 2vh;
+    font-weight: bold;
+    margin-bottom: 2px;
+    display: block;
+  }
+  form:after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    right: 3px;
+   box-shadow: 0px 2px 3px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px white;
+    font-size: 11px;
+   padding: 18px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: -100px;
+    transition: all .3s;
+  }
+  form.emailjs-success:after,
+  form.emailjs-sending:after,
+  form.emailjs-error:after {
+    margin-top: 0;
+    transition: all .3s;
+  }
+  form.emailjs-sending:after {
+    content: 'Sending email...';
+    background: #eee;
+  }
+  form.emailjs-success:after {
+    content: 'Email sent!';
+    background: linear-gradient(222deg, rgba(11,103,226,1) 0%, rgba(33,182,213,1) 19%, rgba(192,21,198,1) 90%);
+    color: white;
+    text-shadow: -1px -1px black;
+    font-size: 5vh;
+  }
+  form.emailjs-error:after {
+    content: 'Error sending email';
+    background: #B71C1C;
+    color: white;
+    text-shadow: -1px -1px black;
+    font-size: 5vh;
+  }
